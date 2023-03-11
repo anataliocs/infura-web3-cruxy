@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Infura Sample Projects</title>
+        <title><%= projectName %></title>
         <meta
           name="description"
           content="Get started learning how to build web3 applications with Infura"
@@ -19,56 +19,29 @@ const Home: NextPage = () => {
       </Head>
 
       <HomePage>
-        <main className={styles.main__no_nav}>
+        <main className={styles.main}>
           <Card containerClassName={styles.card}>
             <div className={styles.card__content}>
-              <h1>Get Started With Infura</h1>
+              <h1><%= projectName %></h1>
               <p>
-                Learn how to use the Infura products to help build your next
-                web3 application. We will guide you through how to set up an
-                Infura project, <a href="https://metamask.io/">connect to MetaMask</a>, upload to IPFS, and mint an
-                NFT.
+                Build the next web3 dApp using Infura, MetaMask and IPFS.
               </p>
               <h2>Send Transaction</h2>
               <p>
-                Learn how to connect to your MetaMask Wallet, transfer ETH, and
+                Use MetaMask to transfer ETH, and
                 review transactions using the Infura API.
               </p>
-              <Link href="/transaction" className={styles.card__link}>
-                <span>GET STARTED</span>
-                <ChevronRight />
-              </Link>
-
-              <h2>IPFS</h2>
-              <p>
-                Learn how to upload files with metadata to IPFS (Inter-Planetary
-                File System) and view them using the Infura API.
-              </p>
-              <Link href="/ipfs" className={styles.card__link}>
-                <span>GET STARTED</span>
-                <ChevronRight />
-              </Link>
-
-              <h2>Notifications</h2>
-              <p>
-                Build on top of the Send Transaction project to learn how to
-                subscribe to an ETH address and receive notifications using the
-                Infura API.
-              </p>
-              <Link href="/notifications" className={styles.card__link}>
-                <span>GET STARTED</span>
+              <Link href="/transaction/connect" className={styles.card__link}>
+                <span>SEND TRANSACTION</span>
                 <ChevronRight />
               </Link>
 
               <h2>Mint an NFT</h2>
               <p>
-                Learn how to mint an NFT using ConsenSys products. You will
-                deploy a smart contract using Truffle, upload images and
-                metadata to IPFS, and then mint your NFT all using the Infura
-                APIs.
+                Mint a NFT with Truffle, upload to IPFS, then mint your NFT using Infura.
               </p>
-              <Link href="/mint" className={styles.card__link}>
-                <span>GET STARTED</span>
+              <Link href="/mint/upload" className={styles.card__link}>
+                <span>MINT</span>
                 <ChevronRight />
               </Link>
             </div>
