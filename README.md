@@ -1,6 +1,6 @@
-# generator-infura-web-3-wizard [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# Infura Web3 Cruxy [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-Automatically create an Infura project based on specific parameters supplied by you!
+Infura Cruxy is a CLI tool that automatically creates an Infura project based on specific parameters supplied by you!
 
 Don't have a Infura Web3 API Key yet?  [Check out our Getting Started with Infura article](https://app.infura.io/register?utm_source=github&utm_medium=devcommunity&utm_campaign=2022_Nov_github-devrel-poc-apps_tutorial_content)
 

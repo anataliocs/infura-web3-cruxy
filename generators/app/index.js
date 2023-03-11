@@ -8,7 +8,7 @@ module.exports = class extends Generator {
     // Have Yeoman greet the user.
     this.log(
       yosay(
-        `Welcome to the ${chalk.rgb(255,88,51).bold('Infura')} Web3 Wizard(Witch) dApp ${chalk.green('Generator')}!!!`
+        `Welcome to ${chalk.rgb(255,88,51).bold('Infura')} Cruxy!  The Web3 dApp ${chalk.green('Generator')}!!!`
       )
     );
     this.log(`${chalk.white.bold.underline('========================================================================================')}`);
@@ -114,6 +114,10 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath('components/ConnectButton.tsx'),
       this.destinationPath('components/ConnectButton.tsx')
+    );
+    this.fs.copy(
+      this.templatePath('components/ConnectWallet.tsx'),
+      this.destinationPath('components/ConnectWallet.tsx')
     );
 
     // Pages
