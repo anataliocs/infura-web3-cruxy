@@ -8,23 +8,29 @@ Or register at: https://app.infura.io/register
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-infura-web-3-wizard using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+- [Yeoman](http://yeoman.io) 
+- [Cruxy](https://www.npmjs.com/) 
+- [node.js](https://nodejs.org/))
 
+Execute in your console:
 ```bash
 npm install -g yo
-npm install -g generator-infura-web-3-wizard
+npm install -g generator-infura-web3-cruxy
 ```
 
 Then generate your new project:
 
 ```bash
-yo infura-web-3-wizard
+yo infura-web3-cruxy
 ```
 
 ## License
 
 MIT © [Chris Anatalio](https://chris-anatalio.dev/)
 
+## Where does the name come from?
+
+A Crux is the hardest part of the route in rock climbing parlance.  A Cruxy move is one of the hardest parts of the climb!
 
 [npm-image]: https://badge.fury.io/js/generator-infura-web-3-wizard.svg
 [npm-url]: https://npmjs.org/package/generator-infura-web-3-wizard

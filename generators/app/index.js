@@ -94,37 +94,6 @@ module.exports = class extends Generator {
     this.log("===================================================\n");
 
     this.log("Project name:", this.props.projectName);
-    this.log("Generating README File according to your parameters!");
-    this.fs.copyTpl(
-      this.templatePath("README.md"),
-      this.destinationPath("README.md"),
-      {
-        projectName: this.props.projectName,
-        githubName: this.props.githubName,
-        author: this.props.author
-      }
-    );
-
-    this.log("Generating MIT License File according to your parameters!");
-    this.fs.copyTpl(
-      this.templatePath("LICENSE"),
-      this.destinationPath("LICENSE"),
-      { author: this.props.author }
-    );
-
-    this.log("Generating your truffle-config.js file!");
-    this.fs.copyTpl(
-      this.templatePath("truffle-config.js"),
-      this.destinationPath("truffle-config.js"),
-      { solidityVersion: this.props.solidityVersion }
-    );
-
-    this.log("Generating your package.json file!");
-    this.fs.copyTpl(
-      this.templatePath("package.json"),
-      this.destinationPath("package.json"),
-      { projectName: this.props.projectName }
-    );
 
     // Components
 
@@ -320,8 +289,8 @@ module.exports = class extends Generator {
       this.destinationPath("migrations/1_initial_migration.js")
     );
     this.fs.copy(
-      this.templatePath("migrations/1_deploy_contracts.js"),
-      this.destinationPath("migrations/1_deploy_contracts.js")
+      this.templatePath("migrations/2_deploy_contracts.js"),
+      this.destinationPath("migrations/2_deploy_contracts.js")
     );
 
     // Pages
@@ -384,22 +353,12 @@ module.exports = class extends Generator {
     // Public Files
 
     this.log("Generating your font and image Files!");
-    this.fs.copy(
-      this.templatePath("public/favicon.ico"),
-      this.destinationPath("public/favicon.ico")
-    );
-
-    // TODO fonts and images
+    this.fs.copy(this.templatePath("public"), this.destinationPath("public"));
 
     // Styles
 
-    this.log("Generating your font and image Files!");
-    this.fs.copy(
-      this.templatePath("styles/globals.css"),
-      this.destinationPath("styles/globals.css")
-    );
-
-    // TODO modules
+    this.log("Generating your style Files!");
+    this.fs.copy(this.templatePath("styles"), this.destinationPath("styles"));
 
     // Tests
 
@@ -443,6 +402,14 @@ module.exports = class extends Generator {
       this.templatePath("custom.modules.d.ts"),
       this.destinationPath("custom.modules.d.ts")
     );
+
+    this.log("Generating MIT License File according to your parameters!");
+    this.fs.copyTpl(
+      this.templatePath("LICENSE"),
+      this.destinationPath("LICENSE"),
+      { author: this.props.author }
+    );
+
     this.fs.copy(
       this.templatePath("next.config.js"),
       this.destinationPath("next.config.js")
@@ -451,10 +418,76 @@ module.exports = class extends Generator {
       this.templatePath("next-env.d.ts"),
       this.destinationPath("next-env.d.ts")
     );
+
+    this.log("Generating your package-lock.json file!");
+    this.fs.copyTpl(
+      this.templatePath("package.json"),
+      this.destinationPath("package.json"),
+      { projectName: this.props.projectName.replaceAll(" ", "-") }
+    );
+
+    this.fs.copy(
+      this.templatePath("package-lock.json"),
+      this.destinationPath("package-lock.json")
+    );
+    this.fs.copy(
+      this.templatePath("postcss.config.js"),
+      this.destinationPath("postcss.config.js")
+    );
+    this.fs.copy(
+      this.templatePath("prettier.config.js"),
+      this.destinationPath("prettier.config.js")
+    );
+    this.fs.copy(
+      this.templatePath("pull_request_template.md"),
+      this.destinationPath("pull_request_template.md")
+    );
+
+    this.fs.copyTpl(
+      this.templatePath("README.md"),
+      this.destinationPath("README.md"),
+      {
+        projectName: this.props.projectName,
+        githubProjectSlug: this.props.projectName
+          .replaceAll(" ", "-")
+          .toLowerCase(),
+        githubName: this.props.githubName,
+        author: this.props.author
+      }
+    );
+
+    this.fs.copy(
+      this.templatePath("tailwind.config.js"),
+      this.destinationPath("tailwind.config.js")
+    );
+    this.fs.copy(
+      this.templatePath("template.env"),
+      this.destinationPath("template.env")
+    );
+
+    this.log("Generating your truffle-config.js file!");
+    this.fs.copyTpl(
+      this.templatePath("truffle-config.js"),
+      this.destinationPath("truffle-config.js"),
+      { solidityVersion: this.props.solidityVersion }
+    );
+
+    this.fs.copy(
+      this.templatePath("tsconfig.json"),
+      this.destinationPath("tsconfig.json")
+    );
+    this.fs.copy(
+      this.templatePath("window.d.ts"),
+      this.destinationPath("window.d.ts")
+    );
+    this.fs.copy(
+      this.templatePath("yarn.lock"),
+      this.destinationPath("yarn.lock")
+    );
   }
 
   install() {
-    this.installDependencies();
+    this.yarnInstall();
 
     this.log("===================================================");
     this.log(`${chalk.green("Your dapp has been generated!!!!")}`);

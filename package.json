@@ -1,6 +1,6 @@
 {
-  "name": "generator-infura-web-3-wizard",
-  "version": "0.0.0",
+  "name": "generator-infura-web3-cruxy",
+  "version": "0.0.1",
   "description": "Automatically create a Infura project based on specific parameters supplied by you!",
   "homepage": "https://www.infura.io/",
   "author": {
@@ -79,6 +79,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "anataliocs/generator-infura-web-3-wizard",
+  "repository": "anataliocs/infura-web3-cruxy",
   "license": "MIT"
 }
