@@ -26,7 +26,7 @@ const StyleGuidePage: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Infura Sample Project Style Guide</title>
+        <title><%= projectName %> Style Guide</title>
         <meta name="description" content="Mondo create next app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
