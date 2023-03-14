@@ -1,4 +1,4 @@
-# Infura Web3 Cruxy [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# Infura Web3 Cruxy [![NPM version][npm-image]][npm-url]
 
 ![alt text](public/cruxy-banner.png)
 
@@ -34,9 +34,5 @@ MIT © [Chris Anatalio](https://chris-anatalio.dev/)
 
 A Crux is the hardest part of the route in rock climbing parlance.  A Cruxy move is one of the hardest parts of the climb!
 
-[npm-image]: https://badge.fury.io/js/generator-infura-web-3-wizard.svg
-[npm-url]: https://npmjs.org/package/generator-infura-web-3-wizard
-[travis-image]: https://travis-ci.com/anataliocs/generator-infura-web-3-wizard.svg?branch=master
-[travis-url]: https://travis-ci.com/anataliocs/generator-infura-web-3-wizard
-[daviddm-image]: https://david-dm.org/anataliocs/generator-infura-web-3-wizard.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/anataliocs/generator-infura-web-3-wizard
+[npm-image]: https://badge.fury.io/js/generator-infura-web3-cruxy.svg
+[npm-url]: https://www.npmjs.com/package/generator-infura-web3-cruxy
